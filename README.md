@@ -1,4 +1,4 @@
-# my_first_app
+# Dice App using flutter
 
 A new Flutter project.
 
