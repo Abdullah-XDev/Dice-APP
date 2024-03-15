@@ -35,17 +35,20 @@ class _DiceRollerState extends State<DiceRoller> {
       children: [
         if (widget.numberOfPlayers > 1)
           Padding(
-            padding: const EdgeInsets.only(
-                bottom: 8.0), // تعديل الـ Padding للزر العلوي
+            padding:
+                const EdgeInsets.only(top: 16), // تعديل الـ Padding للزر العلوي
             child: Stack(
               alignment: Alignment.center,
+              clipBehavior: Clip.none,
               children: [
                 Image.asset(
                   'assets/images/dice-${currentDiceRolls[0]}.png',
                   width: 200,
                 ),
                 Positioned(
-                  top: -20, // تعديل الموقع العلوي للزر ليظهر بالكامل
+                  right: 0,
+                  left: 0,
+                  top: -50, // تعديل الموقع العلوي للزر ليظهر بالكامل
                   child: Transform(
                     alignment: Alignment.center,
                     transform: Matrix4.rotationX(pi), // عكس الزر
@@ -58,7 +61,8 @@ class _DiceRollerState extends State<DiceRoller> {
                           fontSize: 28,
                         ),
                       ),
-                      child: const Text('Roll Dice'),
+                      child: 
+                      const Text('Roll Dice',),
                     ),
                   ),
                 ),
@@ -67,7 +71,7 @@ class _DiceRollerState extends State<DiceRoller> {
           ),
         for (int i = 1; i < widget.numberOfPlayers; i++)
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(5.0),
             child: Column(
               children: [
                 Image.asset(
@@ -77,7 +81,7 @@ class _DiceRollerState extends State<DiceRoller> {
                 TextButton(
                   onPressed: () => rollDice(i),
                   style: TextButton.styleFrom(
-                    padding: const EdgeInsets.only(top: 10),
+                    padding: const EdgeInsets.only(top: 0),
                     foregroundColor: Colors.white,
                     textStyle: const TextStyle(
                       fontSize: 28,
