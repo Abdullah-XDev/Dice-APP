@@ -23,7 +23,7 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: const Center(
-        child: DiceRoller(numberOfPlayers: 2,),
+        child: DiceRoller(numberOfPlayers: 0,),
       ),
     );
   }
