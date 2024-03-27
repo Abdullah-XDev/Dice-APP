@@ -1,6 +1,7 @@
 # Dice App using flutter
 
 A new Flutter project.
+<img width="354" alt="Dice" src="https://github.com/Abdullah-XDev/Dice-APP/assets/163126808/9da348d9-249b-4477-97a7-c6bf32c0db4c">
 
 ## Getting Started
 
